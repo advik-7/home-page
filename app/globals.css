@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 267 35% 12%;
+  --foreground: 210 40% 98%;
+  --card: 267 35% 12%;
+  --card-foreground: 210 40% 98%;
+  --popover: 267 35% 12%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 47 95% 50%;
+  --primary-foreground: 267 35% 12%;
+  --secondary: 267 35% 20%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 267 35% 20%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 267 35% 20%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 267 35% 20%;
+  --input: 267 35% 20%;
+  --ring: 47 95% 50%;
+}
+
+.glass {
+  @apply bg-purple-950/30 backdrop-blur-lg border border-purple-500/20;
+}
+
+.glass-card {
+  @apply bg-purple-950/40 backdrop-blur-lg border border-purple-500/20 hover:bg-purple-900/50 transition-all duration-300;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600;
+}
+
+.bg-grid {
+  background-size: 100px 100px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at center, white, transparent 80%);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(234, 179, 8, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(234, 179, 8, 0.6);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
